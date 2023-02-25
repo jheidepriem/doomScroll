@@ -14,7 +14,9 @@ export default function AboutUsScreen() {
 
   return (
     <View>
-      <Text style={styles.text}>Hi there</Text>
+      <Text style={styles.text}>Does this show up for you?</Text>
+      <Text style={styles.text}>How about this?</Text>
+      <Text style={styles.text}>I just want to show who made this!</Text>
       <LoadingScreen></LoadingScreen>
     </View>
   );
