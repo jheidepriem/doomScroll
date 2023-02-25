@@ -9,6 +9,7 @@ import HomeScreen from "./Screens/HomeScreen";
 import CategoryScreen from "./Screens/CategoryScreen";
 import FilteredScreen from "./Screens/FilteredScreen";
 import DisasterDetailsScreen from "./Screens/DisasterDetailsScreen";
+import AboutUs from "./Screens/AboutUs";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ export default function App() {
           <Stack.Screen name="Doom List" component={CategoryScreen} screenOptions={{headerBackTitle: "Back"}}/>
           <Stack.Screen name="Doom Details" component={DisasterDetailsScreen} screenOptions={{headerBackTitle: "Back"}}  />
           <Stack.Screen name="Meet Your Doom" component={FilteredScreen} screenOptions={{headerBackTitle: "Back"}}  />
+          <Stack.Screen name="About Us!" component={FilteredScreen} screenOptions={{headerBackTitle: "Back"}}  />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
