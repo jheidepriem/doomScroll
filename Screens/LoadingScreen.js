@@ -5,12 +5,14 @@ const LoadingScreen = () => {
   const spinValue = new Animated.Value(0);
 
   // First set up animation
-  Animated.loop(Animated.timing(spinValue, {
-    toValue: 1,
-    duration: 3000,
-    easing: Easing.linear, // Easing is an additional import from react-native
-    useNativeDriver: true, // To make use of native driver for performance
-  })).start();
+  Animated.loop(
+    Animated.timing(spinValue, {
+      toValue: 1,
+      duration: 3000,
+      easing: Easing.linear, // Easing is an additional import from react-native
+      useNativeDriver: true, // To make use of native driver for performance
+    })
+  ).start();
 
   // Next, interpolate beginning and end values (in this case 0 and 1)
   const spin = spinValue.interpolate({
@@ -20,26 +22,26 @@ const LoadingScreen = () => {
 
   return (
     <View>
-    <Animated.View
-      style={[
-        styles.meteorContainer,
-        {
-          transform: [{ rotate: spin }],
-        },
-      ]}
-    >
-      <Image
-        style={styles.meteor}
-        source={require("../assets/asteroid3.png")}
-      ></Image>
-    </Animated.View>
-    <View style={styles.earthContainer}>
-      <Image
-        style={styles.earth}
-        source={require("../assets/splash.png")}
-      ></Image>
+      <Animated.View
+        style={[
+          styles.meteorContainer,
+          {
+            transform: [{ rotate: spin }],
+          },
+        ]}
+      >
+        <Image
+          style={styles.meteor}
+          source={require("../assets/asteroid3.png")}
+        ></Image>
+      </Animated.View>
+      <View style={styles.earthContainer}>
+        <Image
+          style={styles.earth}
+          source={require("../assets/splash.png")}
+        ></Image>
+      </View>
     </View>
-  </View>
   );
 };
 
