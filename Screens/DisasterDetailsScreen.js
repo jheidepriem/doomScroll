@@ -25,7 +25,7 @@ export default function DisasterDetailsScreen({ route }) {
         <Text style={styles.text}>{route.params.date && `Date: ${route.params.date}`}</Text>
         <Text style={styles.text}>{route.params.location && `Location: ${route.params.location}`}</Text>
         <Text style={styles.text}>{route.params.magnitude && `Magnitude: ${route.params.magnitude}`}</Text>
-        <Text style={styles.text} onPress={() => Linking.openURL(route.params.source)}>{route.params.source && route.params.source}</Text>
+        <Text style={[styles.text, styles.link]} onPress={() => Linking.openURL(route.params.source)}>{route.params.source && route.params.source}</Text>
       </View>
   } else if (route.params.missDistance) {
     data = 
@@ -39,7 +39,7 @@ export default function DisasterDetailsScreen({ route }) {
     data = 
       <View>
         <Text style={styles.text}>Doom Coordinates: {route.params.coordinates[0].coordinates[0]}, {route.params.coordinates[0].coordinates[1]}</Text>
-        <Text style={styles.text} onPress={() => Linking.openURL(route.params.source)}>{route.params.source && route.params.source}</Text>
+        <Text style={[styles.text, styles.link]} onPress={() => Linking.openURL(route.params.source)}>{route.params.source && route.params.source}</Text>
       </View>
   }
 
@@ -66,8 +66,10 @@ export default function DisasterDetailsScreen({ route }) {
           coordinate={{latitude: route.params.coordinates[0].coordinates[1], 
           longitude: route.params.coordinates[0].coordinates[0],}}/>
         </MapView>}
-      <Text style={styles.text}>{route.params.title}</Text>
-      {data}
+        <View style={styles.box}> 
+          <Text style={[styles.text, styles.firstText]}>{route.params.title}</Text>
+          {data}
+        </View>
     </View>
   );
 }
@@ -77,11 +79,26 @@ const styles = StyleSheet.create({
     color: "#e7e5d7",
     fontFamily: "Oswald_400Regular",
     fontSize: 20,
-    textAlign: "center"
+    textAlign: "center",
+    paddingBottom: 15
   },
   screen: {
     height: "100%",
     backgroundColor: "#020d19",
   },
+  box: {
+    backgroundColor: "#1e2f42",
+    borderRadius: 15,
+    flex: 1,
+    flexDirection: "column",
+    marginTop: 20,
+  },
+  link: {
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  firstText: {
+    marginTop: 40
+  }
 });
 
