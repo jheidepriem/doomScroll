@@ -1,5 +1,6 @@
 import { StyleSheet, TextInput, View } from "react-native";
 import React, { useState, useEffect } from "react";
+import { useFonts, Oswald_400Regular } from "@expo-google-fonts/oswald";
 
 export default function SearchForm({getSearch}) {
 
@@ -9,6 +10,14 @@ export default function SearchForm({getSearch}) {
     getSearch(search)
   }, [search])
   
+  let [fontsLoaded] = useFonts({
+    Oswald_400Regular
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <View>
       <TextInput 
@@ -30,5 +39,6 @@ const styles = StyleSheet.create({
     height: 50,
     fontSize: 20,
     textAlign: "center",
+    fontFamily: "Oswald_400Regular",
   }
 });
