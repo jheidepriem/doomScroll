@@ -12,12 +12,12 @@ export default function SearchForm({getSearch}) {
   return (
     <View>
       <TextInput 
-      style={styles.search}
-      placeholder="Search"
-      placeholderTextColor="#e7e5d7"
-      type="text"
-      value={search}
-      onChangeText={setSearch}
+        style={styles.search}
+        placeholder="Search"
+        placeholderTextColor="#e7e5d7"
+        type="text"
+        value={search}
+        onChangeText={setSearch}
       />
     </View>
   );
