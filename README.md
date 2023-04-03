@@ -57,7 +57,9 @@ This project is designed to allow users to learn more about the latest natural d
 
 ## Preview 
 <img width="1309" alt="Screen Shot 2023-02-17 at 5 05 06 PM" src="https://user-images.githubusercontent.com/108428451/225041313-8bdf6544-9c74-42c7-90fe-2dbfee58b764.png">
-![Screenshot 2023-03-31 at 12 13 45 PM (2)](https://user-images.githubusercontent.com/108428451/229522882-821eadfc-43c7-4db0-a633-c3f0ed5582e6.png)
+
+<img width="1309" alt="Tech-stack wireframe" src="https://user-images.githubusercontent.com/108428451/229523088-04fec6a6-0e50-466d-b94c-258457e37957.png">
+
 
 ![DSgif1](https://user-images.githubusercontent.com/108428451/227247834-805fbac5-6fad-4e45-8b24-28f6c41f8deb.gif)
 
